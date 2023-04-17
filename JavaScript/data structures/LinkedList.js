@@ -93,28 +93,8 @@ class LinkedList {
     }
 }
 
-const linkedlist = new LinkedList(0);
-// linkedlist.append(5);
-// linkedlist.append(222);
-// linkedlist.append(11);
-// linkedlist.reverse();
-linkedlist.append(1)
-linkedlist.append(2)
-linkedlist.append(3)
-linkedlist.append(4);
+const linkedlist = new LinkedList(10);
 linkedlist.append(5);
-
-
-function returnMid(){
-    let j = linkedlist.head;
-    let i = linkedlist.head;
-    while(j.next !== null || j.next.next !== null){
-        console.log(j);
-        i = i.next;
-        j = j.next.next;
-        console.log('this is head',linkedlist.head);
-    }
-    return i;
-}
-
-console.log(returnMid());
+linkedlist.append(222);
+linkedlist.append(11);
+linkedlist.reverse();
