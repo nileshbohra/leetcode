@@ -3,19 +3,15 @@
 const selectionSort = (arr) => {
     let n = arr.length;
     for (let i = 0; i < n; i++) {
-        let small = arr[i];
-        let smallPointer = null;
+        let minPointer = i;
         for (let j = i + 1; j < n; j++) {
-            if (arr[j] < small) {
-                small = arr[j];
-                smallPointer = j;
+            if (arr[j] < arr[minPointer]) {
+                minPointer = j;
             }
         }
-        if (smallPointer !== null) {
-            let temp = arr[i];
-            arr[i] = arr[smallPointer];
-            arr[smallPointer] = temp;
-        }
+        let temp = arr[i];
+        arr[i] = arr[minPointer];
+        arr[minPointer] = temp;
     }
     return arr;
 }

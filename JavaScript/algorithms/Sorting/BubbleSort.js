@@ -1,4 +1,4 @@
-// Bubbles up highest number to last in each iteration of n through swapping
+// Bubbles up highest number to last in each iteration of n through swapping serially (one by one);
 
 const bubbleSort = (arr) => {
     let n = arr.length;
